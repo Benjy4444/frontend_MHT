@@ -1,0 +1,66 @@
+.main-container {
+  width: 280%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ff4d4d;
+  margin-bottom: 1rem;
+}
+
+.balance {
+  margin-bottom: 1rem;
+}
+
+.form-container {
+  margin-top: 2rem;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form-container input {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-container button {
+  padding: 0.5rem 1rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.form-container button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.disconnected-message {
+  font-size: 0.875rem; /* Tamaño de fuente más pequeño */
+  margin-top: 0.5rem; /* Espacio superior reducido */
+  color: #666; /* Color de texto más suave */
+}
+.message {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #4CAF50;
+}
