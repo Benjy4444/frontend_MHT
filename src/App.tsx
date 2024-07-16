@@ -89,7 +89,7 @@ function App() {
 
   return (
     <main className="main-container">
-      <h1 className="header">MHT Token Transfer</h1>
+      <h1 className="header">MHT Token Transfers</h1>
       
        <div className="rainbow-connect-button">
        <ConnectButton
