@@ -1,5 +1,5 @@
 .main-container {
-  width: 280%;
+  width: 290%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +21,7 @@
 
 .form-container {
   margin-top: 2rem;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   padding: 1rem;
   width: 300px;
   display: flex;
@@ -63,4 +63,19 @@
   margin-top: 1rem;
   font-weight: bold;
   color: #4CAF50;
+}
+
+.connectButton:hover {
+  background-color: #0056b3;
+}
+
+.rainbow-connect-button {
+  padding: 5px 10px !important;
+  font-size: 12px !important;
+  border-radius: 4px;
+  background-color: #f7f7fa;
+  color: rgb(15, 15, 15);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }

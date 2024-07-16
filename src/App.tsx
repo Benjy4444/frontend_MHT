@@ -38,11 +38,11 @@ const DataInputComponent: React.FC<{ handleTransfer: (wallet: string, amount: nu
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="wallet">Wallet:</label>
-          <input type="text" id="wallet" value={wallet} onChange={handleWalletChange} />
+          <input className='form-container input' type="text" id="wallet" value={wallet} onChange={handleWalletChange} />
         </div>
         <div>
           <label htmlFor="amount">Amount:</label>
-          <input type="number" id="amount" value={amount} onChange={handleAmountChange} />
+          <input className='form-container input' type="number" id="amount" value={amount} onChange={handleAmountChange} />
         </div>
         <button type="submit" disabled={isTransferring}>Transfer</button>
       </form>
@@ -90,7 +90,16 @@ function App() {
   return (
     <main className="main-container">
       <h1 className="header">MHT Token Transfer</h1>
-      <ConnectButton />
+      
+       <div className="rainbow-connect-button">
+       <ConnectButton
+  accountStatus={{
+    smallScreen: 'avatar',
+    largeScreen: 'full',
+  }}
+/>
+      </div>
+      
       <div>
         {isConnected ? (
           <div>
