@@ -4,7 +4,6 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useAccount, useReadContract, useWriteContract } from "wagmi";
 import { abi } from './assets/abis/MHTTokenAbi';
 import { MHT_CONTRACT_ADDRESS } from './assets/constants';
-import { waitForTransactionReceipt } from 'viem/actions';
 import { toast } from 'react-toastify';
 
 const DataInputComponent: React.FC<{ handleTransfer: (wallet: string, amount: number) => Promise<boolean>, isTransferring: boolean }> = ({ handleTransfer, isTransferring }) => {
@@ -52,9 +51,7 @@ const DataInputComponent: React.FC<{ handleTransfer: (wallet: string, amount: nu
 };
 
 function App() {
-  const [isMinting, setIsMinting] = useState(false);
   const [isTransferring, setIsTransferring] = useState(false);
-  const [transferMessage, setTransferMessage] = useState<string>('');
   const { address, isConnected } = useAccount();
   const { data, isLoading, refetch } = useReadContract({
     abi,
@@ -74,7 +71,6 @@ function App() {
         args: [wallet, amount],
       });
       console.log('Transaction Hash:', txHash);
-      setTransferMessage(`Transferred ${amount} tokens to ${wallet}`);
       toast.success(`Transferred ${amount} tokens to ${wallet}`);
       await refetch(); // Update the balance after the transfer
       setIsTransferring(false);

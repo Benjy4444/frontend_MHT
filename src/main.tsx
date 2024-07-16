@@ -2,11 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
-import { RainbowKitProvider, darkTheme, getDefaultConfig } from "@rainbow-me/rainbowkit";
-import { arbitrum, arbitrumSepolia, base, mainnet, optimism, polygon, sepolia } from 'wagmi/chains';
+import { RainbowKitProvider, getDefaultConfig } from "@rainbow-me/rainbowkit";
+import { arbitrum, arbitrumSepolia, sepolia } from 'wagmi/chains';
 import { WagmiProvider } from 'wagmi';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 
